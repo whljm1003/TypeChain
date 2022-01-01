@@ -87,7 +87,7 @@ const isBlockValid = (candidateBlock: Block, previousBlock: Block): boolean => {
   } else if (getHashforBlock(candidateBlock) !== candidateBlock.hash) {
     return false;
   } else {
-    return false;
+    return true;
   }
 };
 
@@ -96,5 +96,11 @@ const addBlock = (candidateBlock: Block): void => {
     blockchain.push(candidateBlock);
   }
 };
+
+createNewBlock("second bolock");
+createNewBlock("third bolock");
+createNewBlock("fourth bolock");
+
+console.log(blockchain);
 
 export {};
